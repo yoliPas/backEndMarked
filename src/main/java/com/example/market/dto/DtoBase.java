@@ -1,30 +1,23 @@
-package com.example.market.model;
+package com.example.market.dto;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
 
 import javax.persistence.*;
 import java.util.Date;
 
-@MappedSuperclass
-public class ModelBase {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+public class DtoBase {
+
     private Long id;
 
-    @CreatedDate
-    @Temporal(TemporalType.TIMESTAMP)
-    @Column( nullable = false, updatable = false)
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "YY-MM-DD'T'HH:mm:ss.sssxxx")
     private Date createdOn;
 
-    @LastModifiedDate
-    @Temporal(TemporalType.TIMESTAMP)
-    @Column(insertable = false)
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "YY-MM-DD'T'HH:mm:ss.sssxxx")
     private Date updatedOn;
 
-    @Version
-    @Column(nullable = false)
     private long version;
 
 
