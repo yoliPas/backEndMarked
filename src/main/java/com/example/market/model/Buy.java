@@ -12,7 +12,6 @@ import javax.persistence.Table;
 import java.math.BigDecimal;
 
 @Entity
-@Table(name="compra")
 public class Buy extends ModelBase {
 
     @Column(precision = 10, scale = 5)
