@@ -1,14 +1,12 @@
 package com.example.market.dto;
 
+import com.example.market.model.ModelBase;
 import com.fasterxml.jackson.annotation.JsonFormat;
-import org.springframework.data.annotation.CreatedDate;
-import org.springframework.data.annotation.LastModifiedDate;
 
-import javax.persistence.*;
 import java.util.Date;
 
 
-public class DtoBase {
+public class DtoBase <E extends ModelBase>{
 
     private Long id;
 

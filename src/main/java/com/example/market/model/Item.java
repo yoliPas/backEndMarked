@@ -1,10 +1,12 @@
 package com.example.market.model;
 
+import com.example.market.dto.ItemDto;
+
 import javax.persistence.Entity;
 import javax.persistence.OneToOne;
 
 @Entity
-public class Item extends ModelBase {
+public class Item extends ModelBase<ItemDto> {
     private  String name;
     private  String code;
     private  Byte[] image;

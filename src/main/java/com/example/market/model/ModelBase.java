@@ -1,13 +1,16 @@
 package com.example.market.model;
 
+import com.example.market.dto.DtoBase;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
+import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import javax.persistence.*;
 import java.util.Date;
 
 @MappedSuperclass
-public class ModelBase {
+@EntityListeners(AuditingEntityListener.class)
+public class ModelBase <D extends DtoBase>{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

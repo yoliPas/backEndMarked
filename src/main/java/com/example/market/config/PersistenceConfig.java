@@ -1,11 +1,19 @@
-
 /*
     @uthor: Yolanda Pascual Rivera
 */
 
 package com.example.market.config;
 
-import com.example.market.PersistenceConfig;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
 
-public class PersistenceConfig  {
+
+@Configuration
+@EnableTransactionManagement
+@EnableJpaRepositories
+@EnableJpaAuditing
+public class PersistenceConfig {
+
 }

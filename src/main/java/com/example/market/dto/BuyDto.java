@@ -5,7 +5,7 @@
 package com.example.market.dto;
 
 
-
+import com.example.market.model.Buy;
 import com.example.market.model.ModelBase;
 
 import javax.persistence.Column;
@@ -14,7 +14,7 @@ import javax.persistence.Table;
 import java.math.BigDecimal;
 
 
-public class BuyDto extends ModelBase {
+public class BuyDto extends DtoBase<Buy> {
 
     private BigDecimal value;
 

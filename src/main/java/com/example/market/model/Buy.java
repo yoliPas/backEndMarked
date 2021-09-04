@@ -6,14 +6,16 @@ package com.example.market.model;
 
 
 
+import com.example.market.dto.BuyDto;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 import java.math.BigDecimal;
 
 @Entity
-
-public class Buy extends ModelBase {
+@Table(name="compra")
+public class Buy extends ModelBase<BuyDto> {
 
     @Column(precision = 10, scale = 5)
     private BigDecimal value;
